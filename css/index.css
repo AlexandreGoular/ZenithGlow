@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  font-size: 15px;
+  padding: 0px 30px 10px 0px;
+}
+header a h1 {
+  font-family: sans-serif;
+}
+header a::after {
+  content: " ";
+  width: 0%;
+  height: 5px;
+  background-color: #7cd7cf;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 1s ease-in-out;
+}
+header a:hover::after {
+  width: 100%;
+}
+
+main {
+  width: 600px;
+  height: 402px;
+  background-color: #fc913a;
+  margin: auto;
+  margin-top: 100px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+}
+main .lado_esquerdo {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+}
+main .lado_esquerdo h1 {
+  text-align: center;
+}
+main .lado_esquerdo .icones {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+main .lado_esquerdo .icones .fab.fa-google {
+  color: red;
+  cursor: pointer;
+}
+main .lado_esquerdo .icones .fab.fa-facebook {
+  color: blue;
+  cursor: pointer;
+}
+main .lado_esquerdo .icones .fab.fa-linkedin {
+  color: darkblue;
+  cursor: pointer;
+}
+main .lado_esquerdo a {
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  display: block;
+  color: black;
+  font-family: sans-serif;
+  font-size: 17px;
+}
+main .lado_esquerdo form input {
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+  height: 30px;
+}
+main .lado_esquerdo form input::-webkit-outer-spin-button,
+main .lado_esquerdo form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+main .lado_esquerdo form input:focus {
+  outline: none;
+}
+main .lado_esquerdo form button {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  border: none;
+  background-color: #7cd7cf;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+main .lado_esquerdo .error {
+  text-align: center;
+  margin-top: 20px;
+  width: 200px;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+main .lado_direito {
+  width: 300px;
+  height: 400px;
+  background-color: #7cd7cf;
+}
+main .lado_direito h1 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-top: 100px;
+}
+main .lado_direito p {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+main .lado_direito button {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  border: none;
+  background-color: #7cd7cf;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid black;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+body {
+  transition: background-color 1s ease-in-out;
+}
+
+header a {
+  transition: color 1s ease-in-out;
+}
+
+main {
+  transition: border 1s ease-in-out;
+}
+
+@media only screen and (max-width: 451px) and (min-width: 600px) {
+  main {
+    width: 80%;
+    flex-direction: column;
+    height: auto;
+  }
+  .lado_esquerdo,
+  .lado_direito {
+    width: 80%;
+    margin: 20px 0;
+  }
+  /* Seus estilos para essa faixa de largura */
+}
+@media (max-width: 450px) {
+  main {
+    width: 67%;
+    height: 690px;
+    margin-top: 70px;
+    flex-direction: column;
+  }
+  .lado_esquerdo,
+  .lado_direito {
+    width: 100%;
+    margin: 0;
+  }
+  .error {
+    width: 100%;
+  }
+}/*# sourceMappingURL=index.css.map */

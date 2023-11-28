@@ -1,0 +1,321 @@
+$fonte_letra: sans-serif;
+$cor_fundo_login: #7cd7cf;
+$cor_fundo_criar_conta: #fc913a;
+$cor_letras_modo_dark_index: #e7ddd3;
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+
+
+
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    a 
+    {
+
+        text-decoration: none;
+        color: black;
+        position: relative;
+        font-size: 15px;
+        padding: 0px 30px 10px 0px;
+       
+
+        h1 
+        {
+
+            font-family: $fonte_letra;
+            
+
+        }
+
+    }
+
+
+    a::after 
+    {
+
+        content: " ";
+        width: 0%;
+        height: 5px;
+        background-color: $cor_fundo_login;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 1s ease-in-out;
+
+    }
+
+    a:hover::after
+    {
+
+        width: 100%;
+
+    }
+}
+
+
+main {
+
+    width: 600px;
+    height: 402px;
+    background-color: #fc913a;
+    margin: auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+
+    .lado_esquerdo 
+    {
+
+        width: 300px;
+        height: 400px;
+        background-color: white;
+
+        h1 {
+
+            text-align: center;
+           
+
+        }
+
+        .icones
+        {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 10px;
+
+            .fab.fa-google
+            {
+
+                color: red;
+                cursor: pointer;   
+
+            }
+
+            .fab.fa-facebook
+            {
+
+                color: blue;
+                cursor: pointer;
+
+            }
+
+            .fab.fa-linkedin
+            {
+
+                color: darkblue;
+                cursor: pointer;
+
+            }
+
+        }
+
+        a 
+        {
+
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            display: block;
+            color: black;
+            font-family: $fonte_letra;
+            font-size: 17px;
+
+        }
+
+
+        form 
+        {
+
+            input 
+            {
+
+                margin: auto;
+                display: block;
+                margin-top: 20px;
+                height: 30px;
+
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                appearance: none;
+            }
+
+            input:focus {
+                outline: none;
+            }
+
+            button 
+            {
+
+                width: 200px; 
+                height: 40px; 
+                border-radius: 20px;
+                text-align: center; 
+                line-height: 40px; 
+                border: none; 
+                background-color: $cor_fundo_login; 
+                color: white; 
+                font-size: 13px; 
+                cursor: pointer; 
+                display: block;
+                margin: auto;
+                margin-top: 40px;
+
+            }
+
+        }
+
+        .error
+        {
+
+            text-align: center;
+            margin-top: 20px;
+            width: 200px;
+            margin: auto;
+            margin-top: 15px;
+            border-radius: 5px;
+
+        }
+
+    }    
+
+
+    .lado_direito
+    {
+
+        width: 300px;
+        height: 400px;
+        background-color: $cor_fundo_login;
+
+        h1
+        {
+
+            text-align: center;
+            color: rgb(0, 0, 0);
+            margin-top: 100px;
+
+        }
+
+        p
+        {
+
+            color: rgb(0, 0, 0);
+            text-align: center;
+            margin-top: 20px;
+            font-size: 15px;
+            
+        }
+
+
+        button 
+            {
+
+                width: 200px; 
+                height: 40px; 
+                border-radius: 20px;
+                text-align: center; 
+                line-height: 40px; 
+                border: none; 
+                background-color: $cor_fundo_login; 
+                color: rgb(0, 0, 0); 
+                font-size: 13px; 
+                cursor: pointer; 
+                border: 1px solid black;
+                display: block;
+                margin: auto;
+                margin-top: 40px;
+
+            }
+        
+
+    }
+
+}
+
+
+body {
+    transition: background-color 1s ease-in-out; 
+  }
+  
+  header a {
+    transition: color 1s ease-in-out; 
+  }
+  
+  main {
+    transition: border 1s ease-in-out; 
+  }
+  
+
+
+
+ 
+  @media only screen and (max-width: 451px) and (min-width: 600px) {
+        
+    main {
+
+        width: 80%; 
+        flex-direction: column; 
+        height: auto; 
+  
+      }
+    
+      .lado_esquerdo,
+      .lado_direito {
+  
+        width: 80%; 
+        margin: 20px 0;
+        
+      }
+    /* Seus estilos para essa faixa de largura */
+  }
+  
+
+ 
+
+
+@media (max-width: 450px) {
+
+    main {
+
+      width: 67%; 
+      height: 690px;
+      margin-top: 70px; 
+      flex-direction: column; 
+
+    }
+  
+    .lado_esquerdo,
+    .lado_direito {
+
+      width: 100%; 
+      margin: 0;
+        
+
+    }
+  
+    .error {
+
+      width: 100%; 
+
+    }
+  }
+  

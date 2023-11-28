@@ -1,0 +1,46 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  font-size: 15px;
+  padding: 0px 30px 10px 0px;
+}
+header a h1 {
+  font-family: sans-serif;
+}
+header a::after {
+  content: " ";
+  width: 0%;
+  height: 5px;
+  background-color: #7cd7cf;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 1s ease-in-out;
+}
+header a:hover::after {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+main .death {
+  border: 1px solid black;
+  width: 450px;
+  margin-top: 10px;
+}
+main .death img {
+  width: 100%;
+  height: 500px;
+}
+main .death h1 {
+  text-align: center;
+}/*# sourceMappingURL=zenithGlow.css.map */
